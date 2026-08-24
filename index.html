@@ -951,6 +951,50 @@
         </div>
 
 
+        <!-- Retail Sales Analytics Pipeline -->
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div>
+              <div class="proj-title">Retail Sales Analytics Pipeline</div>
+              <div class="proj-year">Python · SQL · Power BI · 2026</div>
+            </div>
+            <a href="https://github.com/rupalk2501/retail-sales-analytics-pipeline"
+               target="_blank" rel="noreferrer" class="proj-gh">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+              GitHub
+            </a>
+          </div>
+          <div class="proj-row">
+            <div class="proj-kv">
+              <div class="proj-kv-label">Problem</div>
+              <div class="proj-kv-val">Raw retail sales exports are rarely clean — inconsistent date formats, mixed text casing, duplicate transactions, and null rows from failed writes make direct analysis unreliable.</div>
+            </div>
+            <div class="proj-kv">
+              <div class="proj-kv-label">Solution</div>
+              <div class="proj-kv-val">End-to-end ETL pipeline in Python processing 9,170 raw records into a star schema data warehouse (SQLite), with six SQL analytical queries and a Power BI-ready flat CSV export.</div>
+            </div>
+            <div class="proj-kv">
+              <div class="proj-kv-label">Impact</div>
+              <div class="proj-kv-val">8,806 clean rows loaded after removing 148 duplicates and 216 invalid records. £809,487 total revenue surfaced across Finance KPIs: YoY growth, AOV by channel, regional variance, and monthly trends.</div>
+            </div>
+          </div>
+          <details class="proj-details">
+            <summary>Engineering highlights</summary>
+            <ul>
+              <li>Star schema dimensional model: fact_sales + dim_date, dim_product, dim_region, dim_customer_type — designed for analytical querying, not just storage.</li>
+              <li>Six SQL queries using window functions (RANK, running totals), CTEs, and self-joins to produce YoY growth, top-10 product rankings, and regional variance from company average.</li>
+              <li>Power BI DAX measures: Total Revenue, YoY Growth %, and Average Order Value — interactive dashboard with slicers across year, quarter, and category.</li>
+              <li>Pipeline stages: Extract (raw CSV) → Transform (parse mixed dates, normalise casing, drop duplicates/nulls, engineer revenue + calendar fields) → Load (SQLite warehouse + flat CSV).</li>
+            </ul>
+          </details>
+          <div class="tl-tags" style="margin-top:14px;">
+            <span class="tag">Python</span><span class="tag">pandas</span>
+            <span class="tag">SQL</span><span class="tag">SQLite</span>
+            <span class="tag">Star Schema</span><span class="tag">ETL</span>
+            <span class="tag">Power BI</span><span class="tag">DAX</span>
+          </div>
+        </div>
+
         <!-- 3. College App — full width -->
         <div class="proj-card reveal">
           <div class="proj-top">
